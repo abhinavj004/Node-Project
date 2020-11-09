@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>User Page</title>
+  <!-- Bootstrap core CSS-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link href="/css/bootstrap.min_admin.css" rel="stylesheet">
+  <!-- Custom fonts for this template-->
+  <link href="/css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <!-- Custom styles for this template-->
+  <link href="/css/sb-admin.css" rel="stylesheet">
+ 
+</head>
+
+<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+ 
+{{> user/nvgbar}}
+    
+  <div class="content-wrapper">
+    <div class="container-fluid">
+    
+        {{{body}}}
+      
+    </div>
+  
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fa fa-angle-up"></i>
+    </a>
+  
+    {{> user/logout_modal}}
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="/js/jquery/jquery.min.js"></script>
+    <script src="/js/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/jquery-easing/jquery.easing.min.js"></script>
+    <script src="/js/jss/sb-admin.min.js"></script>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+{{#if success}}
+<br>
+<div class="alert alert-success">
+{{success}}
+</div>
+{{/if}}
+
+{{#if error}}
+<br>
+<div class="alert alert-danger">
+{{error}}
+</div>
+{{/if}}
+
+<h2 style="background-color:gainsboro; padding:12px; border-radius:5px">My Profile</h2>
+<div class="row">
+<div class="col-md-4"></div>
+<div class="col-md-4 col-sm-12">
+    <div class="card text-center" style="width: 18rem; margin:10px">
+    <img class="card-img-top" src="/profilePictures/{{user.picture}}" height="300" alt="Card image cap">
+    <div class="card-body">
+        <h5 class="card-title">{{user.name}}</h5>
+        <p class="card-text">{{user.introduction}}</p>
+        <form action="/profile/{{user._id}}?_method=DELETE" method="post" enctype="multipart/form-data">
+        <button type="submit" class="btn btn-danger" style="cursor:pointer">Delete Account</button>
+        </form>
+    </div>
+    </div>
+</div>
+<div class="col-md-4"></div>
+</div>
+
+
+
+
+
+

@@ -1,0 +1,38 @@
+<h2 style="background-color:gainsboro; padding:12px; border-radius:5px" >My Uploads</h2>
+
+{{#if success_message}}
+<div class="alert alert-success">
+{{success_message}}
+</div>
+{{/if}}
+
+
+{{#if documents}}
+<table class="table">
+<thead>
+  <tr>
+    <th scope="col">File</th>
+    <th scope="col">Title</th>
+    <th scope="col">Description</th>
+    <th scope="col">Date</th>
+  </tr>
+</thead>
+<tbody>
+    {{#each documents}}
+  <tr>
+    <td><a href="/uploads/{{file}}" target="_blank">File Link</a></td>
+    <td>{{title}}</td>
+    <td>{{description}}</td>
+    <td>{{date}}</td>
+    <td>
+    <form action="/user/my_uploads/{{_id}}?_method=DELETE" method="post" enctype="multipart/form-data">
+    <button type="submit" class="btn btn-danger" style="cursor:pointer">Delete</button>
+    </form>
+    </td>
+  </tr>
+    {{/each}}
+</tbody>
+</table>
+{{else}}
+<h4 style="text-align: center;margin-top:3%">No Uploads Yet</h4>
+{{/if}}
